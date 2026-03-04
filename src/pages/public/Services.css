@@ -1,0 +1,134 @@
+.page-hero {
+    position: relative;
+    background: var(--primary);
+    padding: 130px 0 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(60% 80% at 50% 0%, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.page-hero h1 {
+    font-size: clamp(32px, 5vw, 56px);
+    color: var(--white);
+    max-width: 700px;
+}
+
+.page-hero p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    max-width: 550px;
+}
+
+.eyebrow-light {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-mid);
+}
+
+.services-grid-section {}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+}
+
+.service-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.service-card>p {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.7;
+}
+
+.service-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.feature-tick {
+    color: var(--accent-mid);
+    flex-shrink: 0;
+}
+
+.cta-strip {
+    background: var(--primary);
+}
+
+.cta-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.cta-strip-inner h2 {
+    font-size: 28px;
+    color: var(--white);
+}
+
+.cta-strip-inner p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-strip-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
